@@ -1,0 +1,6 @@
+id,title,category,description,score
+1,Express Server,Backend,High-performance Node.js framework for APIs,4.8
+2,React Frontend,Frontend,Declarative UI library for component-based interfaces,4.9
+3,FastAPI Service,Data Pipeline,Modern Python web framework for data processing,4.7
+4,MongoDB Database,Storage,Flexible document-based database engine,4.6
+5,Gemini SDK,AI,Google DeepMind SDK for generative AI and reasoning,5.0

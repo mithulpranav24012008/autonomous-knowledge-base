@@ -1,0 +1,8 @@
+Google Gemini API Overview and Configuration Guidelines
+
+The @google/genai SDK provides unified access to Gemini 2.5 Flash and other generative AI models. 
+To initialize the client securely, retrieve your API key from environment variables:
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+
+When processing large text corpuses for Retrieval-Augmented Generation (RAG), text documents should be ingested, chunked, and embedded into vector spaces. 
+The recommended default chunk size is 512 tokens with an overlap of 100 tokens to preserve context across boundaries.

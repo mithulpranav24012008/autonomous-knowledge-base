@@ -1,0 +1,24 @@
+{
+  "name": "gemini-fullstack-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fullstack monorepo featuring React 18, Vite, Tailwind CSS, Express TypeScript, @google/genai, MongoDB, and FastAPI",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
+    "dev:all": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\" \"npm run dev:pipeline\"",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:pipeline": "cd data-pipeline && uvicorn main:app --reload --port 8000",
+    "ingest": "npm run ingest --workspace=backend",
+    "embed": "npm run embed --workspace=backend",
+    "index-vectors": "npm run index-vectors --workspace=backend",
+    "build": "npm run build --workspace=backend && npm run build --workspace=frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
